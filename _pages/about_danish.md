@@ -1,5 +1,9 @@
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `profile.jpg` and put it in the `img/` folder.
+I am a motivated **Master’s student in the [Department of Computer Science](https://www.cs.unm.edu) at the [University of New Mexico (UNM)](https://www.unm.edu)**, Albuquerque, NM. I work under the advisement of [Afsah Anwar](https://www.afsah.org) in the [Beyond Defense Lab](https://www.afsah.org/lab). I completed my undergraduate studies in **Computer Science** at UNM in Spring 2025.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+My research interests lie at the intersection of **Security**, **Privacy**, **Internet Measurement**, and **Machine Learning (LLMs)**. I have collaborated with researchers at **CISPA Helmholtz Center for Information Security**, the **University of Louisiana**, and the **University of Arizona**.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+---
+### 🔗 Connect with me
+- [GitHub](https://github.com/cs-maestro)  
+- [LinkedIn](https://linkedin.com/in/cs-maestro)  
+- [Google Scholar](https://scholar.google.com/citations?user=T1J6algAAAAJ)  

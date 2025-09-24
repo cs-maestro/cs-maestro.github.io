@@ -14,7 +14,7 @@ profile:
     <p>Farris Engineering Center, #2045</p>
     <p>Albuquerque, NM 87106</p>
 
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -30,7 +30,7 @@ latest_posts:
 
 I am a motivated **Master’s student in the [Department of Computer Science](https://www.cs.unm.edu) at the [University of New Mexico (UNM)](https://www.unm.edu)**, Albuquerque, NM. I work under the advisement of [Afsah Anwar](https://www.afsah.org) in the [Beyond Defense Lab](https://www.afsah.org/lab). I completed my undergraduate studies in **Computer Science** at UNM in Spring 2025.
 
-My research interests lie at the intersection of **Security**, **Privacy**, **Internet Measurement**, and **Machine Learning (LLMs)**. I have collaborated with researchers at **CISPA Helmholtz Center for Information Security**, the **University of Louisiana**, and the **University of Arizona**. My work spans from large-scale web security measurements to leveraging machine learning for enhancing security and privacy analysis.
+My research interests lie at the intersection of **Security**, **Privacy**, **Internet Measurement**, and **Machine Learning (LLMs)**. I have collaborated with researchers at **CISPA Helmholtz Center for Information Security**, the **University of Louisiana**, and the **University of Arizona**.
 
 ---
 ### 🔗 Connect with me

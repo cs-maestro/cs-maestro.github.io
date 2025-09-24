@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /teaching/
-title: Teaching
+title: teaching
 description: Teaching assistantships and instructional roles.
 nav: true
 nav_order: 2

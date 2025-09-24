@@ -10,7 +10,7 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Farris #2045</p>
-    <pUniversity of New Mexico</p>
+    <p1 University of New Mexico</p>
     <p>Albuquerque, NM 87106</p>
 
 selected_papers: true # includes a list of papcers marked as "selected={true}"

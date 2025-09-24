@@ -4,7 +4,7 @@ permalink: /teaching/
 title: Teaching
 description: Teaching assistantships and instructional roles.
 nav: true
-nav_order: 6
+nav_order: 2
 ---
 
 ## University of New Mexico

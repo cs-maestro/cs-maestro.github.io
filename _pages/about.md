@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.unm.edu'>University of New Mexico</a>. Albuquerquen, NM. <a href='mailto:mdanish@unm.edu'>mdanish@unm.edu</a>.
+subtitle: <a href='https://www.unm.edu'>University of New Mexico</a>. Albuquerquen, NM.
 
 profile:
   align: right
@@ -11,8 +11,9 @@ profile:
   more_info: >
     <p>Farris #2045</p>
     <pUniversity of New Mexico</p>
+    <p>Albuquerque, NM 87106</p>
 
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papcers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
 announcements:
@@ -26,12 +27,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a motivated **Master’s student in the [Department of Computer Science](https://www.cs.unm.edu) at the [University of New Mexico (UNM)](https://www.unm.edu)**, Albuquerque, NM. I work under the advisement of [Afsah Anwar](https://www.afsah.org) in the [Beyond Defense Lab](https://www.afsah.org/lab). I completed my undergraduate studies in **Computer Science** at UNM in Spring 2025.
+I am a motivated Master’s student in the [Department of Computer Science](https://www.cs.unm.edu) at the [University of New Mexico (UNM)](https://www.unm.edu), Albuquerque, NM. I work under the advisement of [Afsah Anwar](https://www.afsah.org) in the [Beyond Defense Lab](https://www.afsah.org/lab). I completed my undergraduate studies in Computer Science at UNM in Spring 2025.
 
-My research interests lie at the intersection of **Security**, **Privacy**, **Internet Measurement**, and **Machine Learning (LLMs)**. I have collaborated with researchers at **CISPA Helmholtz Center for Information Security**, the **University of Louisiana**, and the **University of Arizona**.
-
----
-### 🔗 Connect with me
-- [GitHub](https://github.com/cs-maestro)  
-- [LinkedIn](https://linkedin.com/in/cs-maestro)  
-- [Google Scholar](https://scholar.google.com/citations?user=T1J6algAAAAJ)  
+My research interests lie at the intersection of Security, Privacy, Internet Measurement, and Machine Learning. I have collaborated with researchers at CISPA Helmholtz Center for Information Security, the University of Louisiana, and the University of Arizona.

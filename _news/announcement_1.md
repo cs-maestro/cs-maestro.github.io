@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: December 2024
 inline: true
 related_posts: false
 ---
 
-A simple inline announcement.
+I have  been recognized by Computing Research Association (CRA) among undergraduate students in North American colleges and universities for outstanding potential in computing research

@@ -1,14 +1,10 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - cs-maestro
 
 repo_description_lines_max: 2
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - cs-maestro/Cars-Image-Classification-Model
+  - cs-maestro/CLI-Password-Manager
+  - cs-maestro/MovieSuggestor
+  - cs-maestro/KeyShooter

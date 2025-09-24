@@ -1,34 +1,35 @@
-"adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"acharya":
+  - firstname: ["Bhupendra", "B.", "Bhupendra Acharya"]
+    url: https://www.bhupendraacharya.com
 
-"podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"pape":
+  - firstname: ["David", "D.", "David Pape"]
+    url: "https://cispa.de/en/people/c01dapa" 
 
-"rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"saad":
+  - firstname: ["Muhammad", "M.", "Muhammad Saad"]
+    url: "https://www.linkedin.com/in/muhmdsaad" 
 
-"bach":
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"schonherr":
+  - firstname: ["Lea", "L.", "Lea Schönherr"]
+    url: "https://leaschoenherr.me"
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
+"holz":
+  - firstname: ["Thorsten", "T.", "Thorsten Holz"]
+    url: "https://www.mpi-sp.org/holz"
 
-"przibram":
-  - firstname: ["Karl"]
-    url: https://link.springer.com/article/10.1007/s00016-019-00242-z
+"sobrados":
+  - firstname: ["Enrique", "E.", "Enrique Sobrados"]
+    url: "https://esobrados.com" 
 
-"schrodinger":
-  - firstname: ["Erwin"]
-    url: https://en.wikipedia.org/wiki/Erwin_Schr%C3%B6dinger
+"saha":
+  - firstname: ["Dheeman", "D.", "Dheeman Saha"]
+    url: "https://www.cs.unm.edu/~dsaha"
 
-"lorentz":
-  - firstname: ["Hendrik Antoon"]
-    url: https://en.wikipedia.org/wiki/Hendrik_Lorentz
+"rahaman":
+  - firstname: ["Sazzadur", "S.", "Sazzadur Rahaman"]
+    url: "https://www.sazzadur.com"
 
-"planck":
-  - firstname: ["Max"]
-    url: https://en.wikipedia.org/wiki/Max_Planck
+"abdullah":
+  - firstname: ["Mueen", "Mueen", "Abdullah Mueen"]
+    url: "https://www.cs.unm.edu/~mueen"

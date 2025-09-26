@@ -85,8 +85,14 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "news-i-have-been-recognized-by-computing-research-association-cra-among-undergraduate-students-in-north-american-colleges-and-universities-for-outstanding-potential-in-computing-research",
+            },},{id: "news-i-have-been-selected-as-a-recipient-of-the-nmef-scholarship-for-2022-by-the-new-mexico-engineering-foundation-for-academic-achievements",
+          title: 'I have been selected as a recipient of the NMEF Scholarship for 2022...',
+          description: "",
+          section: "News",},{id: "news-i-have-been-recognized-by-computing-research-association-cra-among-undergraduate-students-in-north-american-colleges-and-universities-for-outstanding-potential-in-computing-research-certificate",
           title: 'I have been recognized by Computing Research Association (CRA) among undergraduate students in...',
+          description: "",
+          section: "News",},{id: "news-i-have-joined-unm-computer-science-gradaute-student-association-csgsa-as-a-treasurer-for-the-academic-year-2025-26-looking-forward-to-an-exciting-year",
+          title: 'I have joined UNM Computer Science Gradaute Student Association (CSGSA) as a treasurer...',
           description: "",
           section: "News",},{
         id: 'social-email',

@@ -8,11 +8,11 @@
 
 "pape":
   - firstname: ["David", "D.", "David Pape"]
-    url: "https://cispa.de/en/people/c01dapa" 
+    url: "https://cispa.de/en/people/c01dapa"
 
 "saad":
   - firstname: ["Muhammad", "M.", "Muhammad Saad"]
-    url: "https://www.linkedin.com/in/muhmdsaad" 
+    url: "https://www.linkedin.com/in/muhmdsaad"
 
 "schonherr":
   - firstname: ["Lea", "L.", "Lea Schönherr"]
@@ -24,7 +24,7 @@
 
 "sobrados":
   - firstname: ["Enrique", "E.", "Enrique Sobrados"]
-    url: "https://esobrados.com" 
+    url: "https://esobrados.com"
 
 "saha":
   - firstname: ["Dheeman", "D.", "Dheeman Saha"]

@@ -19,8 +19,6 @@ Instructor: _Joseph Haugh_
 - Fostered a collaborative learning environment through group discussions and one-on-one mentoring.
 - Helped freshmen ease into programming by simplifying complex concepts through real-world examples.
 
----
-
 ### CS251L: Intermediate Programming
 
 **Teaching Assistant, Spring 2023**
@@ -35,8 +33,6 @@ Instructor: _Brooke Chenoweth_
 - Delivered hands-on coding workshops and weekly labs, engaging over 40 students.
 - Provided detailed grading feedback to help students improve their **Java programming** practices.
 - Created supplementary teaching resources, including a [YouTube lecture series](https://www.youtube.com/playlist?list=PLZvGx3jASpqLR1ov522DFULkxbzQa7dNC) to reinforce core programming skills.
-
----
 
 ### CS585: Computer Networks
 

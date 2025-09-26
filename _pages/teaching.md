@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Teaching assistantships and instructional roles.
+description: teaching and instructional roles
 nav: true
 nav_order: 2
 ---
@@ -12,6 +12,7 @@ nav_order: 2
 ### CS105L: Introduction to Computer Programming
 
 **Teaching Assistant, Fall 2022**
+
 Instructor: _Joseph Haugh_
 
 - Enhanced students’ understanding of **Python fundamentals** by providing valuable feedback on assignments and exams.
@@ -23,8 +24,11 @@ Instructor: _Joseph Haugh_
 ### CS251L: Intermediate Programming
 
 **Teaching Assistant, Spring 2023**
+
 Instructor: _Joseph Haugh_
+
 **Teaching Assistant, Fall 2023**
+
 Instructor: _Brooke Chenoweth_
 
 - Supported students in mastering **Java programming** concepts.
@@ -37,6 +41,7 @@ Instructor: _Brooke Chenoweth_
 ### CS585: Computer Networks
 
 **Teaching Assistant, Fall 2025**
+
 Instructor: _Afsah Anwar_
 
 - Assisted in developing and evaluating assignments on networking topics.

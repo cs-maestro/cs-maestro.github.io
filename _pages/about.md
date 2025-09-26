@@ -10,7 +10,7 @@ profile:
   image_circular: true # crops the image to make it circular
   more_info: >
     <p>Farris #2145, UNM</p>
-    <p>Albuquerque, NM 87106</p>
+    <p>Albuquerque, NM - 87131</p>
 
 selected_papers: true # includes a list of papcers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page

@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/repositories/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
         },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
           title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
@@ -72,6 +65,9 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "news-i-have-joined-unm-computer-science-gradaute-student-association-csgsa-as-a-treasurer-for-the-academic-year-2025-26-looking-forward-to-an-exciting-year",
           title: 'I have joined UNM Computer Science Gradaute Student Association (CSGSA) as a treasurer...',
+          description: "",
+          section: "News",},{id: "news-i-have-co-founded-lobosec-capture-the-flag-organization-with-enrique-sobrados-as-a-vice-president-lobos-join-us-every-friday-from-2-4pm-at-farris-2150",
+          title: 'I have co-founded LoboSec: Capture the Flag Organization, with Enrique Sobrados, as a...',
           description: "",
           section: "News",},{
         id: 'social-email',

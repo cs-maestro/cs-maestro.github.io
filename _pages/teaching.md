@@ -51,7 +51,7 @@ Instructor: _Afsah Anwar_
 
 **Section Leader, Summer 2024**
 
-- Guided diverse students in learning **Python** and computer science fundamentals.
+- Guided diverse student body in learning **Python** and computer science fundamentals.
 - Prepared and delivered weekly interactive sections, fostering a supportive learning environment.
 - Acted as a mentor, providing both technical expertise and career guidance for student growth.
 

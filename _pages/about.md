@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.unm.edu'>University of New Mexico</a>. Albuquerquen, NM.
+subtitle: <a href='https://www.unm.edu'>University of New Mexico</a>. Albuquerque, NM.
 
 profile:
   align: right

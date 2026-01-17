@@ -11,20 +11,20 @@
   contents:
     - title: PhD Computer Science
       institution: University of New Mexico, Albuquerque, NM, USA
-      year: Aug 2025 – May 2028
+      year: Aug 25 – May 28
     - title: MS Computer Science
       institution: University of New Mexico, Albuquerque, NM, USA
-      year: Aug 2025 – May 2026
+      year: Aug 25 – May 26
     - title: BS Computer Science, Honors Interdisciplinary Liberal Arts Minor
       institution: University of New Mexico, Albuquerque, NM, USA
-      year: Aug 2021 – May 2025
+      year: Aug 21 – May 25
 
 - title: Experience
   type: time_table
   contents:
     - title: Research Assistant
       institution: University of New Mexico
-      year: Dec 2023 – Present
+      year: Dec 23 – Present
       description:
         - Conducted security research on scams and fraud using large datasets, resulting in multiple publications.
         - Designed multi-layered security checks to detect vulnerabilities in online ecosystems.
@@ -32,16 +32,16 @@
 
     - title: Student Programming Analyst
       institution: University of New Mexico
-      year: Oct 2022 – Aug 2025
+      year: Oct 22 – Aug 25
       description:
         - Achieved ∼200% efficiency in campus processes using Power Automate, Power Platform, and Boomi.
         - Increased project visibility and online presence by developing websites using Cascade CMS and WordPress.
         - Reduced testing times by ∼50% through Playwright and Azure DevSecOps pipelines.
-        - Managed cross-functional project implementations across multiple departments for 20,000+ students.
+        - Managed cross-functional project implementations across multiple departments for ,000+ students.
 
     - title: Project Manager
       institution: KritiKal Solutions (Remote)
-      year: May 2021 – Aug 2022
+      year: May 21 – Aug 22
       description:
         - Led cross-functional engineering teams, streamlining operations and driving successful project execution.
         - Reduced project duration by ∼20% by managing requirements, timelines, and progress tracking.
@@ -55,37 +55,37 @@
       institution: University of New Mexico
       year: Spring 2026
       description:
-        - CS544: Introduction to Cybersecurity
+        - "CS544: Introduction to Cybersecurity"
 
     - title: Graduate Teaching Assistant
       institution: University of New Mexico
       year: Fall 2025
       description:
-        - CS585: Computer Networks
+        - "CS585: Computer Networks"
 
     - title: Guest Speaker
       institution: University of New Mexico
       year: Spring 2025
       description:
-        - CS544: Introduction to Cybersecurity
+        - "CS544: Introduction to Cybersecurity"
 
     - title: Undergraduate Teaching Assistant
       institution: University of New Mexico
       year: Fall 2023
       description:
-        - CS251L: Intermediate Programming (Java)
+        - "CS251L: Intermediate Programming (Java)""
 
     - title: Undergraduate Teaching Assistant
       institution: University of New Mexico
       year: Spring 2023
       description:
-        - CS251L: Intermediate Programming (Java)
+        - "CS251L: Intermediate Programming (Java)"
 
     - title: Undergraduate Teaching Assistant
       institution: University of New Mexico
       year: Fall 2022
       description:
-        - CS105L: Introduction to Computer Programming (Python)
+        - "CS105L: Introduction to Computer Programming (Python)"
 
 - title: Honors and Awards
   type: time_table

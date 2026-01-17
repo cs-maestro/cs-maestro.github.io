@@ -9,15 +9,25 @@ nav_order: 2
 
 ## University of New Mexico
 
-### CS105L: Introduction to Computer Programming
+### CS544: Introduction to Cybersecurity
 
-**Teaching Assistant, Fall 2022**
+**Teaching Assistant, Spring 2026**
 
-Instructor: _Joseph Haugh_
+Instructor: _Afsah Anwar_
 
-- Enhanced students’ understanding of **Python fundamentals** by providing valuable feedback on assignments and exams.
-- Fostered a collaborative learning environment through group discussions and one-on-one mentoring.
-- Helped freshmen ease into programming by simplifying complex concepts through real-world examples.
+- Assisted in teaching foundational cybersecurity concepts, including cryptography, network security, authentication, and access control.
+- Supported students during labs and assignments focused on identifying vulnerabilities and applying secure design principles.
+- Assisted with grading and provided constructive feedback to strengthen students’ understanding of secure systems.
+
+### CS585: Computer Networks
+
+**Teaching Assistant, Fall 2025**
+
+Instructor: _Afsah Anwar_
+
+- Assisted in developing and evaluating assignments on networking topics.
+- Guided students through labs and projects in core concepts of computer networks.
+- Provided individualized support during office hours to help students under computer networks.
 
 ### CS251L: Intermediate Programming
 
@@ -34,14 +44,15 @@ Instructor: _Brooke Chenoweth_
 - Provided detailed grading feedback to help students improve their **Java programming** practices.
 - Created supplementary teaching resources, including a [YouTube lecture series](https://www.youtube.com/playlist?list=PLZvGx3jASpqLR1ov522DFULkxbzQa7dNC) to reinforce core programming skills.
 
-### CS585: Computer Networks
+### CS105L: Introduction to Computer Programming
 
-**Teaching Assistant, Fall 2025**
+**Teaching Assistant, Fall 2022**
 
-Instructor: _Afsah Anwar_
+Instructor: _Joseph Haugh_
 
-- Assisted in developing and evaluating assignments on networking topics.
-- Guided students through labs and projects in core concepts of computer networks.
+- Enhanced students’ understanding of **Python fundamentals** by providing valuable feedback on assignments and exams.
+- Fostered a collaborative learning environment through group discussions and one-on-one mentoring.
+- Helped freshmen ease into programming by simplifying complex concepts through real-world examples.
 
 ---
 
@@ -57,4 +68,4 @@ Instructor: _Afsah Anwar_
 
 ---
 
-📚 _More details about courses and teaching materials will be added as I continue my academic journey._
+📚 _More details about courses and teaching will be added as I continue my academic journey._

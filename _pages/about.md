@@ -18,7 +18,7 @@ social: true # includes social icons at the bottom of the page
 announcements:
   enabled: true # includes a list of news items
   scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
+  limit: # leave blank to include all the news in the `_news` folder
 
 latest_posts:
   enabled: false
@@ -26,6 +26,6 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
-I am a motivated MS/PhD student in the [Department of Computer Science](https://www.cs.unm.edu) at the [University of New Mexico (UNM)](https://www.unm.edu), Albuquerque, NM. I work under the advisement of [Afsah Anwar](https://www.afsah.org) in the [Beyond Defense Lab](https://www.afsah.org/lab). I completed my undergraduate studies in Computer Science at UNM in Spring 2025.
+I am a PhD student in the [Department of Computer Science](https://www.cs.unm.edu) at the [University of New Mexico (UNM)](https://www.unm.edu), Albuquerque, NM. I work under the advisement of [Afsah Anwar](https://www.afsah.org) in the [Beyond Defense Lab](https://beyondefense.org). I completed my B.S. and M.S. in Computer Science at UNM in Spring 2025 and Summer 2025, respectively.
 
-My research interests lie at the intersection of Security, Privacy, Internet Measurement, and Machine Learning for Security. I have collaborated with researchers at CISPA Helmholtz Center for Information Security, the University of Louisiana, and the University of Arizona.
+My research interests lie at the intersection of Security, Privacy, Internet Measurement, and Security of  Machine Learning. I have collaborated with researchers at RSAC, CISPA Helmholtz Center for Information Security, University of Louisiana, and University of Arizona.

@@ -1,0 +1,120 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { coauthorUrl as lookupCoauthor } from "../data/coauthors";
+
+interface Props {
+  publication: CollectionEntry<"publications">;
+}
+
+const { publication } = Astro.props;
+const { title, authors, venue, year, links, selected, status, note } = publication.data;
+
+const statusLabel = { preprint: "Preprint", accepted: "Accepted", published: "Published" }[status];
+---
+
+<article class="pub">
+  <p class="authors">
+    {
+      authors.map((name, i) => {
+        const url = lookupCoauthor(name);
+        const isSelf = name === "Muhammad Danish";
+        return (
+          <>
+            {url && !isSelf ? (
+              <a href={url} target="_blank" rel="noopener">{name}</a>
+            ) : (
+              <span class={isSelf ? "self" : undefined}>{name}</span>
+            )}{i < authors.length - 1 ? ", " : ""}
+          </>
+        );
+      })
+    }
+  </p>
+  <h3 class="title">{title}</h3>
+  <p class="meta">
+    <span class="venue">{venue}</span> · <span class="mono">{year}</span>
+    {selected && <span class="badge">Selected</span>}
+    <span class="badge status">{statusLabel}</span>
+  </p>
+  {note && <p class="note">{note}</p>}
+  {
+    links && (
+      <p class="links mono">
+        {links.arxiv && (
+          <a href={links.arxiv} target="_blank" rel="noopener">
+            arXiv
+          </a>
+        )}
+        {links.pdf && (
+          <a href={links.pdf} target="_blank" rel="noopener">
+            PDF
+          </a>
+        )}
+        {links.doi && (
+          <a href={links.doi} target="_blank" rel="noopener">
+            DOI
+          </a>
+        )}
+        {links.code && (
+          <a href={links.code} target="_blank" rel="noopener">
+            Code
+          </a>
+        )}
+      </p>
+    )
+  }
+</article>
+
+<style>
+  .pub {
+    padding: 1.5rem 0;
+    border-top: 1px solid var(--border);
+  }
+
+  .pub:first-of-type {
+    border-top: none;
+  }
+
+  .authors {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.35rem;
+  }
+
+  .authors .self {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  .title {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .meta {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .note {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  .links {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .links a {
+    text-decoration: none;
+    border-bottom: 1px solid var(--accent-soft);
+  }
+</style>

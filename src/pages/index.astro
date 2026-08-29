@@ -1,0 +1,115 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import PublicationEntry from "../components/PublicationEntry.astro";
+import NewsItem from "../components/NewsItem.astro";
+import { getCollection } from "astro:content";
+
+const publications = (await getCollection("publications")).filter((p) => p.data.selected);
+const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
+---
+
+<BaseLayout title="Muhammad Danish">
+  <section class="hero container wide">
+    <div class="hero-text">
+      <p class="eyebrow">PhD Student · Computer Science</p>
+      <h1>Muhammad Danish</h1>
+      <p class="subtitle"><a href="https://www.unm.edu" target="_blank" rel="noopener">University of New Mexico</a>. Albuquerque, NM.</p>
+      <p>
+        I am a PhD student in the <a href="https://www.cs.unm.edu" target="_blank" rel="noopener">Department of Computer Science</a> at
+        the <a href="https://www.unm.edu" target="_blank" rel="noopener">University of New Mexico (UNM)</a>, Albuquerque, NM. I work
+        under the advisement of <a href="https://www.afsah.org" target="_blank" rel="noopener">Afsah Anwar</a> in the
+        <a href="https://beyondefense.org" target="_blank" rel="noopener">Beyond Defense Lab</a>. I completed my B.S. and M.S. in
+        Computer Science at UNM in Spring 2025 and Summer 2025, respectively.
+      </p>
+      <p>
+        My research interests lie at the intersection of Security, Privacy, Internet Measurement, and Security of Machine Learning. I
+        have collaborated with researchers at RSAC, CISPA Helmholtz Center for Information Security, University of Louisiana, and
+        University of Arizona.
+      </p>
+      <p class="office mono">Farris #2145, UNM · Albuquerque, NM – 87131</p>
+      <SocialLinks />
+    </div>
+    <div class="hero-photo">
+      <img src="/img/profile.jpg" alt="Portrait of Muhammad Danish" width="220" height="220" />
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <section class="container wide">
+    <h2>Selected Publications</h2>
+    {publications.map((p) => <PublicationEntry publication={p} />)}
+  </section>
+
+  <hr class="rule" />
+
+  <section class="container wide">
+    <div class="section-head">
+      <h2>Latest News</h2>
+      <a class="mono see-all" href="/news/">See all news →</a>
+    </div>
+    {news.map((n) => <NewsItem item={n} />)}
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+
+  .hero-text {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    margin-top: -0.4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .office {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-photo img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .see-all {
+    font-size: 0.85rem;
+    text-decoration: none;
+  }
+
+  @media (max-width: 720px) {
+    .hero {
+      flex-direction: column-reverse;
+      gap: 1.5rem;
+    }
+
+    .hero-photo img {
+      width: 140px;
+      height: 140px;
+    }
+  }
+</style>

@@ -1,0 +1,35 @@
+---
+import SocialLinks from "./SocialLinks.astro";
+const year = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="container wide footer-inner">
+    <SocialLinks />
+    <p class="copy">© {year} Muhammad Danish</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    border-top: 1px solid var(--border);
+    margin-top: 4rem;
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .copy {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,139 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Timeline from "../components/Timeline.astro";
+import { cv } from "../data/cv";
+---
+
+<BaseLayout title="CV" description="Curriculum vitae of Muhammad Danish, PhD student in Computer Science at the University of New Mexico.">
+  <section class="container wide">
+    <div class="cv-head">
+      <div>
+        <p class="eyebrow">Curriculum Vitae</p>
+        <h1>Muhammad Danish</h1>
+      </div>
+      <a class="download mono" href="/cv/CV_Danish_Muhammad.pdf" target="_blank" rel="noopener">Download PDF ↓</a>
+    </div>
+
+    <h2>General Information</h2>
+    <ul class="general-info">
+      {
+        cv.generalInfo.map((item) => (
+          <li>
+            <span class="label mono">{item.label}</span>
+            <span>{item.value}</span>
+          </li>
+        ))
+      }
+    </ul>
+
+    <h2>Education</h2>
+    <Timeline entries={cv.education} />
+
+    <h2>Experience</h2>
+    <Timeline entries={cv.experience} />
+
+    <h2>Teaching</h2>
+    <Timeline entries={cv.teaching} />
+
+    <h2>Honors &amp; Awards</h2>
+    <ul class="flat-list">
+      {cv.honors.map((item) => <li>{item}</li>)}
+    </ul>
+
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      {
+        cv.skills.map((group) => (
+          <div>
+            <h3 class="skill-title">{group.title}</h3>
+            <ul class="flat-list">
+              {group.items.map((item) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))
+      }
+    </div>
+
+    <h2>Volunteering</h2>
+    <ul class="flat-list">
+      {cv.volunteering.map((item) => <li>{item}</li>)}
+    </ul>
+  </section>
+</BaseLayout>
+
+<style>
+  .cv-head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+  }
+
+  .download {
+    text-decoration: none;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+
+  .download:hover {
+    background: var(--accent-soft);
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .general-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .general-info li {
+    display: flex;
+    gap: 1rem;
+    padding: 0.4rem 0;
+  }
+
+  .label {
+    color: var(--text-muted);
+    min-width: 140px;
+  }
+
+  .flat-list {
+    padding-left: 1.2rem;
+    margin: 0.5rem 0 0;
+  }
+
+  .flat-list li {
+    margin-bottom: 0.35rem;
+  }
+
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 0.5rem;
+  }
+
+  .skill-title {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 720px) {
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+</style>

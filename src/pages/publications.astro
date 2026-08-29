@@ -1,0 +1,44 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PublicationEntry from "../components/PublicationEntry.astro";
+import { getCollection } from "astro:content";
+
+const publications = (await getCollection("publications")).sort(
+  (a, b) => (b.data.date?.valueOf() ?? b.data.year) - (a.data.date?.valueOf() ?? a.data.year)
+);
+
+const byYear = new Map<number, typeof publications>();
+for (const pub of publications) {
+  const list = byYear.get(pub.data.year) ?? [];
+  list.push(pub);
+  byYear.set(pub.data.year, list);
+}
+const years = [...byYear.keys()].sort((a, b) => b - a);
+---
+
+<BaseLayout title="Publications" description="Publications by Muhammad Danish, PhD student in Computer Science at the University of New Mexico.">
+  <section class="container wide">
+    <p class="eyebrow">Research Output</p>
+    <h1>Publications</h1>
+    {
+      years.map((year) => (
+        <div class="year-group">
+          <h2 class="year mono">{year}</h2>
+          {byYear.get(year)!.map((p) => <PublicationEntry publication={p} />)}
+        </div>
+      ))
+    }
+  </section>
+</BaseLayout>
+
+<style>
+  .year-group {
+    margin-top: 2rem;
+  }
+
+  .year {
+    font-size: 1rem;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+</style>

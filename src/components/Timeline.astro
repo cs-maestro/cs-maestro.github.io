@@ -1,0 +1,52 @@
+---
+import type { TimeTableEntry } from "../data/cv";
+
+interface Props {
+  entries: TimeTableEntry[];
+}
+
+const { entries } = Astro.props;
+---
+
+<div class="timeline">
+  {
+    entries.map((entry) => (
+      <div class="timeline-row">
+        <div class="when">{entry.year}</div>
+        <div>
+          <h3 class="entry-title">{entry.title}</h3>
+          <p class="institution">{entry.institution}</p>
+          {entry.description && (
+            <ul>
+              {entry.description.map((line) => (
+                <li>{line}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    ))
+  }
+</div>
+
+<style>
+  .entry-title {
+    font-size: 1.05rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .institution {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+  }
+
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+  }
+
+  li {
+    margin-bottom: 0.3rem;
+  }
+</style>

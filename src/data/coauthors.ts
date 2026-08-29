@@ -15,6 +15,8 @@ export const coauthors: Coauthor[] = [
   { name: "Priya Kaushik", url: "https://www.cs.arizona.edu/person/priya-kaushik" },
   { name: "Sazzadur Rahaman", url: "https://www.sazzadur.com" },
   { name: "Abdullah Mueen", url: "https://www.cs.unm.edu/~mueen" },
+  { name: "Jack Vanlyssel", url: "https://jackvanlyssel.com/" },
+  { name: "Roya Ensafi", url: "https://ensa.fi/" },
 ];
 
 export function coauthorUrl(name: string): string | undefined {

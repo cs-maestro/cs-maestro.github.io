@@ -8,6 +8,5 @@ authors:
   - Afsah Anwar
 venue: IEEE S&P 2027
 year: 2027
-selected: true
 status: accepted
 ---

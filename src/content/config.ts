@@ -24,7 +24,6 @@ const publications = defineCollection({
         code: z.string().url().optional(),
       })
       .optional(),
-    selected: z.boolean().default(false),
     status: z.enum(["preprint", "accepted", "published"]).default("published"),
     note: z.string().optional(),
   }),

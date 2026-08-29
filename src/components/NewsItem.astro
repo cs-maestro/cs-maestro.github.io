@@ -3,9 +3,10 @@ import type { CollectionEntry } from "astro:content";
 
 interface Props {
   item: CollectionEntry<"news">;
+  compact?: boolean;
 }
 
-const { item } = Astro.props;
+const { item, compact = false } = Astro.props;
 const { Content } = await item.render();
 
 const formatted = item.data.date.toLocaleDateString("en-US", {
@@ -16,7 +17,7 @@ const formatted = item.data.date.toLocaleDateString("en-US", {
 });
 ---
 
-<article class="news-item">
+<article class:list={["news-item", { compact }]}>
   <p class="when mono">{formatted}</p>
   <div class="body">
     <Content />
@@ -58,5 +59,14 @@ const formatted = item.data.date.toLocaleDateString("en-US", {
       grid-template-columns: 1fr;
       gap: 0.25rem;
     }
+  }
+
+  .news-item.compact {
+    padding: 0.85rem 0;
+    font-size: 0.8rem;
+  }
+
+  .news-item.compact .when {
+    font-size: 0.75rem;
   }
 </style>

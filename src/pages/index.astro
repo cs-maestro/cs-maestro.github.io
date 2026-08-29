@@ -5,8 +5,10 @@ import PublicationEntry from "../components/PublicationEntry.astro";
 import NewsItem from "../components/NewsItem.astro";
 import { getCollection } from "astro:content";
 
-const publications = (await getCollection("publications")).filter((p) => p.data.selected);
-const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 3);
+const publications = (await getCollection("publications"))
+  .sort((a, b) => (b.data.date?.valueOf() ?? b.data.year) - (a.data.date?.valueOf() ?? a.data.year))
+  .slice(0, 5);
+const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 5);
 ---
 
 <BaseLayout title="Muhammad Danish">
@@ -23,33 +25,37 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
         Computer Science at UNM in Spring 2025 and Summer 2025, respectively.
       </p>
       <p>
-        My research interests lie at the intersection of Security, Privacy, Internet Measurement, and Security of Machine Learning. I
-        have collaborated with researchers at RSAC, CISPA Helmholtz Center for Information Security, University of Louisiana, and
-        University of Arizona.
+        My work has spanned Web Security and Privacy and Internet Measurement, and I am now focused on Model Compression and
+        Adversarial Machine Learning. Along the way, I've had the opportunity to collaborate with researchers at RSAC, the CISPA
+        Helmholtz Center for Information Security, the University of Michigan, the University of Arizona, and the University of
+        Louisiana.
       </p>
-      <p class="office mono">Farris #2145, UNM · Albuquerque, NM – 87131</p>
-      <SocialLinks />
     </div>
     <div class="hero-photo">
       <img src="/img/profile.jpg" alt="Portrait of Muhammad Danish" width="220" height="220" />
+      <p class="office mono">Farris #2145, UNM · Albuquerque, NM – 87131</p>
+      <SocialLinks />
     </div>
-  </section>
-
-  <hr class="rule" />
-
-  <section class="container wide">
-    <h2>Selected Publications</h2>
-    {publications.map((p) => <PublicationEntry publication={p} />)}
   </section>
 
   <hr class="rule" />
 
   <section class="container wide">
     <div class="section-head">
-      <h2>Latest News</h2>
+      <h2>Publications</h2>
+      <a class="mono see-all" href="/publications/">See all publications →</a>
+    </div>
+    {publications.map((p) => <PublicationEntry publication={p} compact />)}
+  </section>
+
+  <hr class="rule" />
+
+  <section class="container wide">
+    <div class="section-head">
+      <h2>News</h2>
       <a class="mono see-all" href="/news/">See all news →</a>
     </div>
-    {news.map((n) => <NewsItem item={n} />)}
+    {news.map((n) => <NewsItem item={n} compact />)}
   </section>
 </BaseLayout>
 
@@ -74,10 +80,12 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
     margin-bottom: 1.5rem;
   }
 
-  .office {
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    margin-bottom: 1.25rem;
+  .hero-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
   }
 
   .hero-photo img {
@@ -85,7 +93,17 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
     height: 220px;
     object-fit: cover;
     border-radius: 50%;
-    flex-shrink: 0;
+  }
+
+  .office {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0;
+  }
+
+  .hero-photo :global(.social-links) {
+    justify-content: center;
   }
 
   .section-head {

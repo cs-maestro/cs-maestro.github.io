@@ -4,15 +4,16 @@ import { coauthorUrl as lookupCoauthor } from "../data/coauthors";
 
 interface Props {
   publication: CollectionEntry<"publications">;
+  compact?: boolean;
 }
 
-const { publication } = Astro.props;
-const { title, authors, venue, year, links, selected, status, note } = publication.data;
+const { publication, compact = false } = Astro.props;
+const { title, authors, venue, year, links, status, note } = publication.data;
 
 const statusLabel = { preprint: "Preprint", accepted: "Accepted", published: "Published" }[status];
 ---
 
-<article class="pub">
+<article class:list={["pub", { compact }]}>
   <p class="authors">
     {
       authors.map((name, i) => {
@@ -33,7 +34,6 @@ const statusLabel = { preprint: "Preprint", accepted: "Accepted", published: "Pu
   <h3 class="title">{title}</h3>
   <p class="meta">
     <span class="venue">{venue}</span> · <span class="mono">{year}</span>
-    {selected && <span class="badge">Selected</span>}
     <span class="badge status">{statusLabel}</span>
   </p>
   {note && <p class="note">{note}</p>}
@@ -116,5 +116,24 @@ const statusLabel = { preprint: "Preprint", accepted: "Accepted", published: "Pu
   .links a {
     text-decoration: none;
     border-bottom: 1px solid var(--accent-soft);
+  }
+
+  .pub.compact {
+    padding: 1rem 0;
+  }
+
+  .pub.compact .authors {
+    font-size: 0.8rem;
+  }
+
+  .pub.compact .title {
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .pub.compact .meta,
+  .pub.compact .note,
+  .pub.compact .links {
+    font-size: 0.75rem;
   }
 </style>

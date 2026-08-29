@@ -6,7 +6,6 @@ const links = [
   { href: "/publications/", label: "Publications" },
   { href: "/teaching/", label: "Teaching" },
   { href: "/news/", label: "News" },
-  { href: "/cv/", label: "CV" },
 ];
 
 const path = Astro.url.pathname;
@@ -26,6 +25,9 @@ const path = Astro.url.pathname;
             </li>
           ))
         }
+        <li>
+          <a href="/cv/CV_Danish_Muhammad.pdf" target="_blank" rel="noopener">CV</a>
+        </li>
       </ul>
     </nav>
     <ThemeToggle />

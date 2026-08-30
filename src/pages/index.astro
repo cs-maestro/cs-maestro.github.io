@@ -33,8 +33,11 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
     </div>
     <div class="hero-photo">
       <img src="/img/profile.jpg" alt="Portrait of Muhammad Danish" width="220" height="220" />
-      <p class="office mono">Farris #2145, UNM · Albuquerque, NM – 87131</p>
-      <SocialLinks />
+      <p class="office mono">
+        Farris #2145, UNM<br />
+        Albuquerque, NM – 87131
+      </p>
+      <SocialLinks vertical />
     </div>
   </section>
 

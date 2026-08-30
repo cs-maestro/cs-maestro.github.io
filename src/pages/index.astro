@@ -34,8 +34,7 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
     <div class="hero-photo">
       <img src="/img/profile.jpg" alt="Portrait of Muhammad Danish" width="220" height="220" />
       <p class="office mono">
-        Farris #2145, UNM<br />
-        Albuquerque, NM – 87131
+        <span>Farris #2145, UNM</span> <span class="office-line2">Albuquerque, NM – 87131</span>
       </p>
       <SocialLinks vertical />
     </div>
@@ -105,6 +104,10 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
     margin: 0;
   }
 
+  .office-line2 {
+    display: block;
+  }
+
   .hero-photo :global(.social-links) {
     justify-content: center;
   }
@@ -128,9 +131,17 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
       gap: 1.5rem;
     }
 
+    .hero-photo {
+      align-self: center;
+    }
+
     .hero-photo img {
       width: 140px;
       height: 140px;
+    }
+
+    .office-line2 {
+      display: inline;
     }
   }
 </style>

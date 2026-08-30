@@ -9,7 +9,7 @@ authors:
   - Abdullah Mueen
   - Sazzadur Rahaman
   - Afsah Anwar
-venue: ACM CCS 2026
+venue: ACM Conference on Computer and Communications Security (CCS)
 year: 2026
 date: 2026-07-18
 links:

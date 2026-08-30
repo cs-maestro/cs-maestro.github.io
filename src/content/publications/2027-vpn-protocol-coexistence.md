@@ -6,7 +6,7 @@ authors:
   - Jack Vanlyssel
   - Roya Ensafi
   - Afsah Anwar
-venue: IEEE S&P 2027
+venue: IEEE Symposium on Security and Privacy (S&P)
 year: 2027
 status: accepted
 ---

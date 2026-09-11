@@ -4,19 +4,31 @@ import SocialLinks from "../components/SocialLinks.astro";
 import PublicationEntry from "../components/PublicationEntry.astro";
 import NewsItem from "../components/NewsItem.astro";
 import { getCollection } from "astro:content";
+import { comparePublications } from "../utils/publications";
 
 const publications = (await getCollection("publications"))
-  .sort((a, b) => (b.data.date?.valueOf() ?? b.data.year) - (a.data.date?.valueOf() ?? a.data.year))
+  .sort(comparePublications)
   .slice(0, 5);
 const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 5);
 ---
 
 <BaseLayout title="Muhammad Danish">
   <section class="hero container wide">
-    <div class="hero-text">
+    <div class="hero-heading">
       <p class="eyebrow">PhD Student · Computer Science</p>
       <h1>Muhammad Danish</h1>
       <p class="subtitle"><a href="https://www.unm.edu" target="_blank" rel="noopener">University of New Mexico</a>. Albuquerque, NM.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="/img/profile.jpg" alt="Portrait of Muhammad Danish" width="220" height="220" />
+      <div class="hero-details">
+        <SocialLinks vertical />
+        <p class="office mono">
+          <span>Farris #2145, UNM</span> <span class="office-line2">Albuquerque, NM – 87131</span>
+        </p>
+      </div>
+    </div>
+    <div class="hero-text">
       <p>
         I am a PhD student in the <a href="https://www.cs.unm.edu" target="_blank" rel="noopener">Department of Computer Science</a> at
         the <a href="https://www.unm.edu" target="_blank" rel="noopener">University of New Mexico (UNM)</a>, Albuquerque, NM. I work
@@ -30,13 +42,6 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
         Helmholtz Center for Information Security, the University of Michigan, the University of Arizona, and the University of
         Louisiana.
       </p>
-    </div>
-    <div class="hero-photo">
-      <img src="/img/profile.jpg" alt="Portrait of Muhammad Danish" width="220" height="220" />
-      <p class="office mono">
-        <span>Farris #2145, UNM</span> <span class="office-line2">Albuquerque, NM – 87131</span>
-      </p>
-      <SocialLinks vertical />
     </div>
   </section>
 
@@ -63,16 +68,24 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
 
 <style>
   .hero {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 220px;
+    grid-template-areas:
+      "heading photo"
+      "bio photo";
+    grid-template-rows: auto 1fr;
+    column-gap: 3rem;
     padding-top: 3rem;
     padding-bottom: 1rem;
   }
 
+  .hero-heading {
+    grid-area: heading;
+    min-width: 0;
+  }
+
   .hero-text {
-    flex: 1;
+    grid-area: bio;
     min-width: 0;
   }
 
@@ -83,11 +96,17 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
   }
 
   .hero-photo {
+    grid-area: photo;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    flex-shrink: 0;
+  }
+
+  .hero-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 
   .hero-photo img {
@@ -127,21 +146,55 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
 
   @media (max-width: 720px) {
     .hero {
-      flex-direction: column-reverse;
-      gap: 1.5rem;
+      grid-template-columns: minmax(0, 1fr) 80px;
+      grid-template-areas:
+        "heading portrait"
+        "contacts contacts"
+        "bio bio";
+      gap: 1rem;
+      padding-top: 1.5rem;
+      padding-bottom: 0;
+    }
+
+    .subtitle {
+      margin-bottom: 0;
     }
 
     .hero-photo {
-      align-self: center;
+      display: contents;
     }
 
     .hero-photo img {
-      width: 140px;
-      height: 140px;
+      grid-area: portrait;
+      width: 80px;
+      height: 80px;
+      margin-top: 0.25rem;
+    }
+
+    .hero-details {
+      grid-area: contacts;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+
+    .hero-details :global(.social-links) {
+      justify-content: flex-start;
+    }
+
+    .office {
+      text-align: left;
+    }
+
+    .hero-text > p:last-child {
+      margin-bottom: 0;
     }
 
     .office-line2 {
       display: inline;
+    }
+
+    .rule {
+      margin: 2rem 0;
     }
   }
 </style>

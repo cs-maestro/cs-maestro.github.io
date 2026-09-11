@@ -2,10 +2,9 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PublicationEntry from "../components/PublicationEntry.astro";
 import { getCollection } from "astro:content";
+import { comparePublications } from "../utils/publications";
 
-const publications = (await getCollection("publications")).sort(
-  (a, b) => (b.data.date?.valueOf() ?? b.data.year) - (a.data.date?.valueOf() ?? a.data.year)
-);
+const publications = (await getCollection("publications")).sort(comparePublications);
 
 const byYear = new Map<number, typeof publications>();
 for (const pub of publications) {

@@ -4,44 +4,36 @@ import SocialLinks from "../components/SocialLinks.astro";
 import PublicationEntry from "../components/PublicationEntry.astro";
 import NewsItem from "../components/NewsItem.astro";
 import { getCollection } from "astro:content";
-import { comparePublications } from "../utils/publications";
 
 const publications = (await getCollection("publications"))
-  .sort(comparePublications)
+  .sort((a, b) => (b.data.date?.valueOf() ?? b.data.year) - (a.data.date?.valueOf() ?? a.data.year))
   .slice(0, 5);
 const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf()).slice(0, 5);
 ---
 
 <BaseLayout title="Muhammad Danish">
   <section class="hero container wide">
-    <div class="hero-heading">
+    <div class="hero-text">
       <p class="eyebrow">PhD Student · Computer Science</p>
       <h1>Muhammad Danish</h1>
       <p class="subtitle"><a href="https://www.unm.edu" target="_blank" rel="noopener">University of New Mexico</a>. Albuquerque, NM.</p>
+      <p>
+        I am a PhD student in <a href="https://www.cs.unm.edu" target="_blank" rel="noopener">Computer Science</a> at the 
+        <a href="https://www.unm.edu" target="_blank" rel="noopener">University of New Mexico (UNM)</a>, where I work with 
+        <a href="https://www.afsah.org" target="_blank" rel="noopener">Dr. Afsah Anwar</a> in the 
+        <a href="https://beyondefense.org" target="_blank" rel="noopener">Beyond Defense Lab</a>. My research focuses on 
+        understanding how practical design and deployment choices affect the security and privacy of real-world systems. 
+        My current work examines how model compression techniques influence the security, privacy, and adversarial robustness 
+        of machine-learning models. More broadly, my research has investigated security and privacy challenges across the 
+        Web, VPN ecosystems, and Internet infrastructure.
+      </p>
     </div>
     <div class="hero-photo">
       <img src="/img/profile.jpg" alt="Portrait of Muhammad Danish" width="220" height="220" />
-      <div class="hero-details">
-        <SocialLinks vertical />
-        <p class="office mono">
-          <span>Farris #2145, UNM</span> <span class="office-line2">Albuquerque, NM – 87131</span>
-        </p>
-      </div>
-    </div>
-    <div class="hero-text">
-      <p>
-        I am a PhD student in the <a href="https://www.cs.unm.edu" target="_blank" rel="noopener">Department of Computer Science</a> at
-        the <a href="https://www.unm.edu" target="_blank" rel="noopener">University of New Mexico (UNM)</a>, Albuquerque, NM. I work
-        under the advisement of <a href="https://www.afsah.org" target="_blank" rel="noopener">Afsah Anwar</a> in the
-        <a href="https://beyondefense.org" target="_blank" rel="noopener">Beyond Defense Lab</a>. I completed my B.S. and M.S. in
-        Computer Science at UNM in Spring 2025 and Summer 2025, respectively.
+      <p class="office mono">
+        <span>Farris #2145, UNM</span> <span class="office-line2">Albuquerque, NM – 87131</span>
       </p>
-      <p>
-        My work has spanned Web Security and Privacy and Internet Measurement, and I am now focused on Model Compression and
-        Adversarial Machine Learning. Along the way, I've had the opportunity to collaborate with researchers at RSAC, the CISPA
-        Helmholtz Center for Information Security, the University of Michigan, the University of Arizona, and the University of
-        Louisiana.
-      </p>
+      <SocialLinks vertical />
     </div>
   </section>
 
@@ -68,24 +60,16 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
 
 <style>
   .hero {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 220px;
-    grid-template-areas:
-      "heading photo"
-      "bio photo";
-    grid-template-rows: auto 1fr;
-    column-gap: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 3rem;
     padding-top: 3rem;
     padding-bottom: 1rem;
   }
 
-  .hero-heading {
-    grid-area: heading;
-    min-width: 0;
-  }
-
   .hero-text {
-    grid-area: bio;
+    flex: 1;
     min-width: 0;
   }
 
@@ -96,17 +80,11 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
   }
 
   .hero-photo {
-    grid-area: photo;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-  }
-
-  .hero-details {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+    flex-shrink: 0;
   }
 
   .hero-photo img {
@@ -146,55 +124,21 @@ const news = (await getCollection("news")).sort((a, b) => b.data.date.valueOf() 
 
   @media (max-width: 720px) {
     .hero {
-      grid-template-columns: minmax(0, 1fr) 80px;
-      grid-template-areas:
-        "heading portrait"
-        "contacts contacts"
-        "bio bio";
-      gap: 1rem;
-      padding-top: 1.5rem;
-      padding-bottom: 0;
-    }
-
-    .subtitle {
-      margin-bottom: 0;
+      flex-direction: column-reverse;
+      gap: 1.5rem;
     }
 
     .hero-photo {
-      display: contents;
+      align-self: center;
     }
 
     .hero-photo img {
-      grid-area: portrait;
-      width: 80px;
-      height: 80px;
-      margin-top: 0.25rem;
-    }
-
-    .hero-details {
-      grid-area: contacts;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-
-    .hero-details :global(.social-links) {
-      justify-content: flex-start;
-    }
-
-    .office {
-      text-align: left;
-    }
-
-    .hero-text > p:last-child {
-      margin-bottom: 0;
+      width: 140px;
+      height: 140px;
     }
 
     .office-line2 {
       display: inline;
-    }
-
-    .rule {
-      margin: 2rem 0;
     }
   }
 </style>

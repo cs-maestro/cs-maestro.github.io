@@ -13,7 +13,7 @@ venue: ACM Conference on Computer and Communications Security (CCS)
 year: 2026
 date: 2026-07-18
 links:
-  arxiv: "https://arxiv.org/abs/2601.09232"
+  pdf: "/papers/tragedy-of-convenience.pdf"
 status: accepted
-note: "Earlier arXiv preprint version under the title “Private Links, Public Leaks: Consequences of Frictionless User Experience on the Security and Privacy Posture of SMS-Delivered URLs” (arXiv:2601.09232)."
+note: "Earlier preprint version under the title “Private Links, Public Leaks: Consequences of Frictionless User Experience on the Security and Privacy Posture of SMS-Delivered URLs”."
 ---

@@ -8,5 +8,7 @@ authors:
   - Afsah Anwar
 venue: IEEE Symposium on Security and Privacy (S&P)
 year: 2027
+links:
+  pdf: "/papers/vpn-protocol-coexistence.pdf"
 status: accepted
 ---
